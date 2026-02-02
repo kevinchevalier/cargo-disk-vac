@@ -1,0 +1,28 @@
+#main-container {
+    height: 1fr;
+    padding: 1;
+}
+
+#projects-table {
+    height: 1fr;
+    margin-bottom: 1;
+}
+
+#total-display {
+    height: 1;
+    padding: 0 1;
+    background: $primary;
+    color: $text;
+    text-style: bold;
+}
+
+#status-bar {
+    height: 1;
+    padding: 0 1;
+    background: $surface;
+    color: $text-muted;
+}
+
+DataTable > .datatable--cursor {
+    background: $accent;
+}

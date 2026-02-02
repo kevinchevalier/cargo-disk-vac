@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cargo-disk-vac"
+version = "0.1.0"
+description = "A TUI tool to manage Cargo build cache disk usage"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "textual>=0.47.0",
+]
+
+[project.scripts]
+cargo-disk-vac = "cargo_disk_vac.__main__:main"
