@@ -1,8 +1,9 @@
 # Cargo Disk Vacuum
 
 A TUI tool to manage Cargo build cache disk usage.
+<img width="1324" height="930" alt="Screenshot 2026-02-03 at 8 54 27 AM" src="https://github.com/user-attachments/assets/6cd21907-afa4-408a-a451-ddf65bf54e40" />
 
-<img width="1023" height="766" alt="Screenshot 2025-12-17 at 3 12 25 PM" src="https://github.com/user-attachments/assets/acc93898-5aa8-4303-a6ce-fc1ad0dccad9" />
+
 
 ## Features
 
