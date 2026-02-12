@@ -1,8 +1,25 @@
 """Scanner module for finding Cargo projects and calculating cache sizes."""
 
 import os
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
+
+
+def get_git_branch(project_path: Path) -> str:
+    """Get the current git branch for a project directory."""
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+            cwd=project_path,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            return result.stdout.strip()
+    except Exception:
+        pass
+    return ""
 
 
 @dataclass
@@ -12,6 +29,7 @@ class CargoProject:
     name: str
     path: Path
     cache_size: int  # Size in bytes
+    branch: str = ""
 
     @property
     def cache_size_human(self) -> str:
@@ -79,11 +97,13 @@ def find_cargo_projects(root: Path, max_depth: int = 2) -> list[CargoProject]:
 
         if has_cargo_toml and has_target and target_path:
             cache_size = get_directory_size(target_path)
+            branch = get_git_branch(current)
             projects.append(
                 CargoProject(
                     name=current.name,
                     path=current,
                     cache_size=cache_size,
+                    branch=branch,
                 )
             )
 
