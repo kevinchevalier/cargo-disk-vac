@@ -35,4 +35,4 @@ cargo-disk-vac /path/to/projects
 | `c` | Clean selected project's cache |
 | `q` | Quit |
  
-tests
+tests hey
