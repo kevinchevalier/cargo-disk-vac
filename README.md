@@ -34,3 +34,9 @@ cargo-disk-vac /path/to/projects
 | `r` | Refresh project list and sizes |
 | `c` | Clean selected project's cache |
 | `q` | Quit |
+
+
+
+
+
+hey
