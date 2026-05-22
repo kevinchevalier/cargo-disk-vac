@@ -12,7 +12,7 @@ A TUI tool to manage Cargo build cache disk usage.
 - Clean individual project caches with a single keypress
 
 ## Installation
- enRequires Python 3.12 or newer.
+   enRequires Python 3.12 or newer.
 s
 ```bash
 pip install -e .
