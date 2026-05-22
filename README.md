@@ -15,6 +15,8 @@ A TUI tool to manage Cargo build cache disk usage.
    enRequires Python 3.12 or newer
 
 
+i
+
 .
 s
 ```bash
